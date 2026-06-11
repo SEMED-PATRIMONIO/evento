@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0056b3,#0b66d4,#0066cc);
+    overflow:hidden;
+}
+
+/* Elementos decorativos */
+body::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-80px;
+    left:-80px;
+    filter:blur(20px);
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.05);
+    border-radius:50%;
+    bottom:-120px;
+    right:-120px;
+    filter:blur(30px);
+}
+
+/* Caixa principal */
+.glass-card{
+    width:90%;
+    max-width:380px;
+    padding:35px 25px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.25),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+}
+
+/* Ícone */
+.icon{
+    width:95px;
+    height:95px;
+    margin:0 auto 25px auto;
+    border:4px solid #00e676;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#00e676;
+    font-size:52px;
+    font-weight:bold;
+
+    box-shadow:0 0 25px rgba(0,230,118,0.35);
+}
+
+h1{
+    color:white;
+    font-size:1.8rem;
+    line-height:1.2;
+    margin-bottom:20px;
+    text-transform:uppercase;
+    text-shadow:0 2px 8px rgba(0,0,0,0.25);
+}
+
+p{
+    color:rgba(255,255,255,0.95);
+    font-size:1rem;
+    line-height:1.6;
+}
+
+.destaque{
+    margin-top:12px;
+    font-weight:600;
+}
+
+@media (max-width:480px){
+
+    .glass-card{
+        width:92%;
+        padding:30px 22px;
+    }
+
+    h1{
+        font-size:1.5rem;
+    }
+
+    p{
+        font-size:0.95rem;
+    }
+
+    .icon{
+        width:80px;
+        height:80px;
+        font-size:45px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="glass-card">
+
+    <div class="icon">✓</div>
+
+    <h1>Atenção</h1>
+
+    <p>
+        Ao término do evento,
+        leia o QR Code exibido.
+    </p>
+
+    <p class="destaque">
+        Será necessário para que suas horas fiquem registradas,
+        tanto para a obtenção do Certificado quanto para emissão
+        de Relatórios de Participação.
+    </p>
+
+</div>
+
+</body>
+</html>
